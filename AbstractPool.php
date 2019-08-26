@@ -68,6 +68,13 @@ abstract class AbstractPool
         return $this;
     }
 
+    /**
+     * 获取连接
+     *
+     * @param int $timeOut
+     *
+     * @return array|mixed|null
+     */
     public function getConnection($timeOut = 3)
     {
         $obj = null;
