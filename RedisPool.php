@@ -12,5 +12,6 @@ class RedisPool extends AbstractPool
             'timeout' => $this->dbConfig['timeout']
         ]);
         $redis->connect($this->dbConfig['host'], $this->dbConfig['port']);
+        return $redis;
     }
 }
