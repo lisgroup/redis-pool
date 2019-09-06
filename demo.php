@@ -7,6 +7,7 @@ $httpServer->set(
     ['worker_num' => 1]
 );
 $httpServer->on("WorkerStart", function () {
+    RedisPool::getInstance()->init();
 });
 
 $httpServer->on("request", function ($request, $response) {
