@@ -11,5 +11,8 @@ $httpServer->on("WorkerStart", function () {
 });
 
 $httpServer->on("request", function ($request, $response) {
+    $db = null;
+    $redisPool = RedisPool::getInstance()->getConnection();
+    var_dump($redisPool);
 });
 $httpServer->start();
