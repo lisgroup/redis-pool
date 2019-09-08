@@ -17,7 +17,7 @@ abstract class AbstractPool
     private $connections; // 连接池组
     protected $spareTime; // 用于空闲连接回收判断
     // 数据库配置
-    protected $dbConfig = [
+    protected $redisConfig = [
         'host' => '127.0.0.1',
         'port' => 6379,
         'user' => '',
@@ -40,11 +40,11 @@ abstract class AbstractPool
     protected function createObject()
     {
         $obj = null;
-        $db = $this->createDb();
-        if ($db) {
+        $redis = $this->createDb();
+        if ($redis) {
             $obj = [
                 'last_used_time' => time(),
-                'db' => $db,
+                'redis' => $redis,
             ];
         }
         return $obj;
