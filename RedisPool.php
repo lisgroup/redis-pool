@@ -19,9 +19,9 @@ class RedisPool extends AbstractPool
     {
         $redis = new Swoole\Coroutine\Redis([
             'connect_timeout' => 1,
-            'timeout' => $this->dbConfig['timeout']
+            'timeout' => $this->redisConfig['timeout']
         ]);
-        $redis->connect($this->dbConfig['host'], $this->dbConfig['port']);
+        $redis->connect($this->redisConfig['host'], $this->redisConfig['port']);
         return $redis;
     }
 }
