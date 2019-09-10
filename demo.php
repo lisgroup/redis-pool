@@ -11,8 +11,14 @@ $httpServer->on("WorkerStart", function () {
 });
 
 $httpServer->on("request", function ($request, $response) {
-    $db = null;
+    $redis = null;
     $redisPool = RedisPool::getInstance()->getConnection();
-    var_dump($redisPool);
+    // var_dump($redisPool);
+    if (!empty($redisPool) && isset($redisPool['redis'])) {
+        $redis = $redisPool['redis'];
+
+        $res = $redis->get('name');
+        $response->end($res ?? 'NULL');
+    }
 });
 $httpServer->start();
