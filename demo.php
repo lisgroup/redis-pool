@@ -18,6 +18,8 @@ $httpServer->on("request", function ($request, $response) {
         $redis = $redisPool['redis'];
 
         $res = $redis->get('name');
+
+        RedisPool::getInstance()->free($redisPool);
         $response->end($res ?? 'NULL');
     }
 });
