@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Redis 连接池类库
+ *
+ * User: lisgroup
+ * Date: 19-9-5
+ * Time: 10:20
+ */
 
 require_once __DIR__.'/AbstractPool.php';
 
