@@ -13,6 +13,11 @@ class RedisPool extends AbstractPool
 {
     public static $instance;
 
+    /**
+     * self instance
+     *
+     * @return RedisPool
+     */
     public static function getInstance()
     {
         if (!(self::$instance instanceof RedisPool)) {
