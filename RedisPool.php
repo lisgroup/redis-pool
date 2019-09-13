@@ -21,6 +21,9 @@ class RedisPool extends AbstractPool
         return self::$instance;
     }
 
+    /**
+     * @return \Swoole\Coroutine\Redis
+     */
     protected function createDb()
     {
         $redis = new Swoole\Coroutine\Redis([
