@@ -20,8 +20,8 @@ abstract class AbstractPool
     protected $redisConfig = [
         'host' => '127.0.0.1',
         'port' => 6379,
-        'user' => '',
         'password' => '',
+        'redisDb' => 0,
         'timeout' => 3,
     ];
 
