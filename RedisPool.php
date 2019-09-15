@@ -39,6 +39,7 @@ class RedisPool extends AbstractPool
             'timeout' => $this->redisConfig['timeout']
         ]);
         $redis->connect($this->redisConfig['host'], $this->redisConfig['port']);
+
         return $redis;
     }
 }
