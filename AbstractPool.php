@@ -21,7 +21,7 @@ abstract class AbstractPool
         'host' => '127.0.0.1',
         'port' => 6379,
         'password' => '',
-        'redisDb' => 0,
+        'selectDb' => 0,
         'timeout' => 3,
     ];
 

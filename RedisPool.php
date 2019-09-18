@@ -41,7 +41,7 @@ class RedisPool extends AbstractPool
         $redis->connect($this->redisConfig['host'], $this->redisConfig['port']);
 
         $redis->auth($this->redisConfig['password']);
-        $redis->select($this->redisConfig['redisDb']);
+        $redis->select($this->redisConfig['selectDb']);
         return $redis;
     }
 }
