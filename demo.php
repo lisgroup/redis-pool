@@ -1,4 +1,11 @@
 <?php
+/**
+ * Redis 连接池 demo
+ *
+ * User: lisgroup
+ * Date: 19-9-10
+ * Time: 10:20
+ */
 
 require_once __DIR__.'/RedisPool.php';
 
@@ -20,7 +27,7 @@ $httpServer->on("request", function ($request, $response) {
         $res = $redis->get('name');
 
         RedisPool::getInstance()->free($redisPool);
-        $response->end($res ?? 'NULL');
+        $response->end($res ?? '');
     }
 });
 $httpServer->start();
