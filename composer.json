@@ -1,6 +1,6 @@
 {
   "name": "lisgroup/redis-pool",
-  "description": "The lisgroup redis-pool",
+  "description": "The lisgroup Redis-Connection-Pool",
   "keywords": ["lisgroup", "Redis", "Redis Connection Pool", "PHP Swoole Connection Pool"],
   "type": "library",
   "license": "MIT",
