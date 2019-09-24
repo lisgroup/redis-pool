@@ -14,3 +14,4 @@ Redis Pool 是基于 PHP 扩展 Swoole 开发的 Redis 数据库连接池。
 
 1. AbstractPool.php 连接池封装抽象类
 2. RedisPool.php 协程 Redis 连接池
+3. demo.php 示例文件
