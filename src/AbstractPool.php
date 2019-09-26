@@ -7,7 +7,9 @@
  * Time: 10:20
  */
 
-use Swoole\Coroutine\Channel;
+namespace Pool;
+
+use \Swoole\Coroutine\Channel;
 
 abstract class AbstractPool
 {

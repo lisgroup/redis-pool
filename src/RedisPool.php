@@ -7,7 +7,7 @@
  * Time: 10:20
  */
 
-require_once __DIR__.'/AbstractPool.php';
+namespace Pool;
 
 class RedisPool extends AbstractPool
 {
@@ -34,7 +34,7 @@ class RedisPool extends AbstractPool
      */
     protected function createDb()
     {
-        $redis = new Swoole\Coroutine\Redis([
+        $redis = new \Swoole\Coroutine\Redis([
             'connect_timeout' => 1,
             'timeout' => $this->redisConfig['timeout']
         ]);
