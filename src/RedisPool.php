@@ -9,6 +9,8 @@
 
 namespace Pool;
 
+use Swoole\Coroutine\Redis;
+
 class RedisPool extends AbstractPool
 {
     /**
@@ -30,11 +32,11 @@ class RedisPool extends AbstractPool
     }
 
     /**
-     * @return \Swoole\Coroutine\Redis
+     * @return Redis
      */
     protected function createPool()
     {
-        $redis = new \Swoole\Coroutine\Redis([
+        $redis = new Redis([
             'connect_timeout' => 1,
             'timeout' => $this->redisConfig['timeout']
         ]);

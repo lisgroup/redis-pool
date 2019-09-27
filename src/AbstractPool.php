@@ -9,7 +9,7 @@
 
 namespace Pool;
 
-use \Swoole\Coroutine\Channel;
+use Swoole\Coroutine\Channel;
 
 abstract class AbstractPool
 {
