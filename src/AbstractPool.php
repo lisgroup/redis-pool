@@ -29,7 +29,7 @@ abstract class AbstractPool
 
     private $inited = false;
 
-    protected abstract function createDb();
+    protected abstract function createPool();
 
     public function __construct()
     {
@@ -42,7 +42,7 @@ abstract class AbstractPool
     protected function createObject()
     {
         $obj = null;
-        $redis = $this->createDb();
+        $redis = $this->createPool();
         if ($redis) {
             $obj = [
                 'last_used_time' => time(),

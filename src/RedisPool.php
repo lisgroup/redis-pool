@@ -32,7 +32,7 @@ class RedisPool extends AbstractPool
     /**
      * @return \Swoole\Coroutine\Redis
      */
-    protected function createDb()
+    protected function createPool()
     {
         $redis = new \Swoole\Coroutine\Redis([
             'connect_timeout' => 1,
