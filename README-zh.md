@@ -6,30 +6,37 @@ Redis Pool 是基于 PHP 扩展 Swoole 开发的 Redis 数据库连接池。
 #### 项目介绍
 基于 Swoole4 实现的协程 Redis 数据库连接池
 
+## Project description
 
-#### 使用说明
+Redis Pool is a Redis database connection pool developed based on PHP extended Swoole.
 
-##### 1. composer 安装
+#### Project introduction
+
+Cooperative Redis database connection pool based on Swoole4 implementation.
+
+#### Instructions for Use
+
+##### 1. composer Installation
 
 ```bash
 composer require lisgroup/redis-pool
 ```
 
-##### 2. 复制文件启动脚本
+##### 2. Copy file startup script
 
-复制示例代码 `demo.php` 到项目目录，启动脚本
+Copy the sample code `demo.php` to the project directory and start the script.
 
 ```bash
 php demo.php
 ```
 
-##### 3. 测试用例
+##### 3. test case
+         
+Browser access： http://localhost:9501/
 
-浏览器访问： http://localhost:9501/
 
+#### Document description
 
-#### 文件说明
-
-1. src/AbstractPool.php 连接池封装抽象类
-2. src/RedisPool.php 协程 Redis 连接池
-3. demo.php 示例文件
+1. src/AbstractPool.php -- Connection pool encapsulates abstract classes
+2. src/RedisPool.php -- Cooperative Redis Connection Pool
+3. demo.php Example file
