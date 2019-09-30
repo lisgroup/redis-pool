@@ -1,6 +1,6 @@
 # redis-pool
 
-
+[中文文档](README-zh.md)
 ## Project description
 
 Redis Pool is a Redis database connection pool developed based on PHP extended Swoole.
