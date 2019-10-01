@@ -7,6 +7,15 @@
  * Time: 10:20
  */
 
+// Need extension & Check Version Swoole
+if (extension_loaded('swoole')) {
+    if (version_compare(SWOOLE_VERSION, '2.1.3', '<')) {
+        exit('Error: The Swoole Must >= 2.1.3');
+    }
+} else {
+    exit('Error: This Project dependence Swoole');
+}
+
 require_once __DIR__.'/vendor/autoload.php';
 
 $httpServer = new swoole_http_server('0.0.0.0', 9501);
